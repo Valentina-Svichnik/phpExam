@@ -13,11 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('login');
-});
+Auth::routes();
 
-Route::post('/login/submit', function () {
-    return "Все ок";
-})->name('login-submit');
-
+Route::get('/', 'PanelController@index')->name('home');
