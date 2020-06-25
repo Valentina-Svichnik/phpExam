@@ -15,8 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', 'PanelController@index')->name('home');
+Route::get('/home', 'PanelController@index');
 
-Route::get('/pass', function() {
-    return password_hash('12345', PASSWORD_BCRYPT);
-});
+Route::get('/', 'PanelController@index')->name('home');

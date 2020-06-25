@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-  Login
+  Panel
 @endsection
 
 @section('content')
