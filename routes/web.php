@@ -18,3 +18,7 @@ Auth::routes();
 Route::get('/home', 'PanelController@index');
 
 Route::get('/', 'PanelController@index')->name('home');
+
+Route::get('/pass', function () {
+    return password_hash("12345", PASSWORD_BCRYPT);
+});
