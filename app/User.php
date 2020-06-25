@@ -19,6 +19,11 @@ class User extends Authenticatable
         'name', 'email', 'password',
     ];
 
+    public function forms()
+    {
+        return $this->morphMany('App\Form', 'formable');
+    }
+
     /**
      * The attributes that should be hidden for arrays.
      *
