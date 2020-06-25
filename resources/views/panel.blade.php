@@ -11,6 +11,18 @@
         <h1 class="mt-5 mb-4">Панель администратора</h1>
         <h2>Список созданных экспертных сессий</h2>
         <button class="btn btn-success" href="{{route('session')}}">Создать сессию</button>
+        <table>
+        <tbody>
+        @foreach($forms as $form)
+        <tr>
+          <td>{{$form->id}}</td>
+          <td>{{$form->name}}</td>
+          <td>{{$form->description}}</td>
+        </tr>
+        @endforeach
+        </tbody>
+        </table>
+
       </div>
     </div>
   </div>

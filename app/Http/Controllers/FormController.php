@@ -8,7 +8,8 @@ class FormController extends Controller
 {
 
     public function index() {
-        
+        $forms = Form::all();
+        return view('panel', compact('forms'));
     }
 
     public function new(Request $request) {
