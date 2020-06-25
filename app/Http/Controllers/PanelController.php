@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Form;
 
 class PanelController extends Controller
 {
@@ -23,6 +24,8 @@ class PanelController extends Controller
      */
     public function index()
     {
-        return view('panel');
+        $forms = Form::all();
+        return view('panel', compact('forms'));
     }
+
 }
